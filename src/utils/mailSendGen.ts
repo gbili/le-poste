@@ -1,13 +1,14 @@
 import { SentMessageInfo, Transporter } from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
-export type SendMailGenConfig = { defaultFromName: string, user: string, commaSeparatedToAddresses?: string; transporter: Transporter };
+export type SendMailGenConfig = { defaultFromName: string, user: string, commaSeparatedToAddresses?: string; commaSeparatedAdminAddresses?: string; transporter: Transporter };
 
-export const mailSendGen = ({ defaultFromName, user, commaSeparatedToAddresses, transporter }: SendMailGenConfig) => {
+export const mailSendGen = ({ defaultFromName, user, commaSeparatedToAddresses, commaSeparatedAdminAddresses, transporter }: SendMailGenConfig) => {
   return async function mailSend(mailOptions: Mail.Options): Promise<SentMessageInfo> {
     const finalMailOptions = {
       from: `"${defaultFromName}️" <${user}>`,
       to: commaSeparatedToAddresses || undefined,
+      bcc: commaSeparatedAdminAddresses || undefined,
       ...mailOptions,
     };
     try {

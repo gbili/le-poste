@@ -13,7 +13,7 @@ const loadDictElement: LoadDictElement<SendMail> = {
 
   factory: function ({
     transporter,
-    mailConfig: { defaultFromName, commaSeparatedToAddresses },
+    mailConfig: { defaultFromName, commaSeparatedToAddresses, commaSeparatedAdminAddresses },
     transporterConfig: { user }
   }: MailFactoryParams) {
 
@@ -21,6 +21,7 @@ const loadDictElement: LoadDictElement<SendMail> = {
       user: user,
       defaultFromName,
       commaSeparatedToAddresses,
+      commaSeparatedAdminAddresses: commaSeparatedAdminAddresses || undefined,
       transporter,
     });
 

@@ -1,4 +1,4 @@
-# Le Poste
+# `Le Poste`
 
 A simple interface to send emails.
 
@@ -9,7 +9,7 @@ A simple interface to send emails.
 
 ## Installation
 
-To install this npm package do
+To install this `npm` package do
 
 ```sh
 npm i le-poste
@@ -58,7 +58,7 @@ A question emerges, how do we pass the connection data to `mailSend` ? We don't 
 
 ## Passing connection info
 
-In order to configure mailSend, we need to be using dotenv, or add some properties to `process.env`. They are the following:
+In order to configure mailSend, we need to be using `dotenv`, or add some properties to `process.env`. They are the following:
 
 ```env
 MAIL_SMTP_HOST=mail.yourmailprovider.com
@@ -69,7 +69,3 @@ MAIL_ADMIN_TO_COMMA_LIST="Notify Me Aswell" <admin@cousteau.com>
 MAIL_TO_COMMA_LIST="Le phare" <le@phare.com>
 MAIL_PASSWORD='s0meR4nd0mCh4r5'
 ```
-
-## Todo
-
-You may have noticed there is an `MAIL_ADMIN_TO_COMMA_LIST` variable. Currently it is mandatory but not used, which is of course very odd. We need to either remove it completely, or make it optional.
