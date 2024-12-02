@@ -1,6 +1,6 @@
 {
   "name": "le-poste",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a mail wrapper to forget about essential details of life",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
