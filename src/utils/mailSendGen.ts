@@ -1,5 +1,6 @@
 import { SentMessageInfo, Transporter } from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
+import { parseEmailList } from './mailStrings';
 
 export type SendMailGenConfig = { defaultFromName: string, user: string, commaSeparatedToAddresses?: string; commaSeparatedAdminAddresses?: string; transporter: Transporter };
 
@@ -7,8 +8,8 @@ export const mailSendGen = ({ defaultFromName, user, commaSeparatedToAddresses, 
   return async function mailSend(mailOptions: Mail.Options): Promise<SentMessageInfo> {
     const finalMailOptions = {
       from: `"${defaultFromName}️" <${user}>`,
-      to: commaSeparatedToAddresses || undefined,
-      bcc: commaSeparatedAdminAddresses || undefined,
+      to: (commaSeparatedToAddresses && parseEmailList(commaSeparatedToAddresses)) || undefined,
+      bcc: (commaSeparatedAdminAddresses && parseEmailList(commaSeparatedAdminAddresses)) || undefined,
       ...mailOptions,
     };
     try {
