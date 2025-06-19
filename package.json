@@ -1,6 +1,6 @@
 {
   "name": "le-poste",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a mail wrapper to forget about essential details of life",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -21,23 +21,23 @@
   },
   "homepage": "https://github.com/gbili/le-poste#readme",
   "devDependencies": {
-    "@types/chai": "4.2.9",
-    "@types/chai-as-promised": "^7.1.4",
-    "@types/mocha": "7.0.1",
+    "@types/chai": "5.2.2",
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/mocha": "10.0.10",
     "@types/node": "^13.7.1",
-    "@types/nodemailer": "^6.4.4",
-    "chai": "^4.3.6",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "^9.2.1",
-    "saylo": "^0.5.1"
+    "@types/nodemailer": "^6.4.17",
+    "chai": "^5.2.0",
+    "chai-as-promised": "^8.0.1",
+    "mocha": "^11.7.0",
+    "saylo": "^0.6.2"
   },
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "di-why": "^0.15.12",
-    "dotenv": "^8.0.0",
-    "nodemailer": "^6.9.16",
-    "swiss-army-knifey": "^1.32.2"
+    "di-why": "^0.16.0",
+    "dotenv": "^16.5.0",
+    "nodemailer": "^7.0.3",
+    "swiss-army-knifey": "^1.36.3"
   }
 }
